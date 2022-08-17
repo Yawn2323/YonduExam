@@ -1,0 +1,7 @@
+{
+  "name": "yondu_exam",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

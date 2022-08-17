@@ -1,0 +1,71 @@
+ion-content {
+    background-color:black;
+    .main_wrapper {
+        padding-top:50px;
+        .logo{
+            margin-top:100px;
+            padding-left:20px;
+            padding-right:20px;
+             img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 80%;
+    
+             }
+          }
+          .dialog{
+            padding-top:20px;
+            text-align:center;
+            padding-bottom:20px;
+            p {
+                font-style: italic;
+            }
+          }
+          form {
+            padding-top:40px;
+            padding-right:15px;
+            padding-left:15px;
+            ion-button {
+                margin-top:20px;
+            }
+            ion-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 20px;
+                --background:#ffff;
+                border: 1px solid #e5e5e5;
+                box-shadow:
+                0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                0 12.5px 10px rgba(0, 0, 0, 0.06),
+                0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+                0 100px 80px rgba(0, 0, 0, 0.12);
+                width: 100%;
+                --highlight-color-valid: transparent;
+                --highlight-color-invalid: transparent;
+                --highlight-color-focused: var(--ion-color-light);
+        
+                &:nth-child(1) {
+                margin-bottom: 15px;
+                }
+        
+                    ion-input {
+                    border-radius: 4px;
+                    display: block;
+                    --padding-bottom: 12px;
+                    --padding-top: 12px;
+                    --placeholder-font-weight: bold;
+                    --placeholder-color: #656565;
+        
+                    input {
+                        padding-left: 10px;
+                        height: 100%;
+                    }
+                }
+             }  
+          }
+    }
+}

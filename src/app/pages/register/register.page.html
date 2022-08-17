@@ -1,0 +1,98 @@
+<ion-content>
+  <div class="main_wrapper">
+    <div class="logo"></div>
+    <div class="dialog">
+      <p>Register Exam</p>
+    </div>
+    <form
+      padding
+      [formGroup]="registerForm"
+      (ngSubmit)="onSubmit(registerForm)"
+    >
+      <div class="main_wrapper">
+        <div padding>
+          <ion-item lines="none">
+            <ion-input
+              placeholder="First Name"
+              formControlName="firstName"
+              type="first_name"
+            ></ion-input> </ion-item
+          ><br />
+          <ion-item lines="none">
+            <ion-input
+              placeholder="Last Name"
+              formControlName="lastName"
+              type="text"
+              minlength="6"
+            ></ion-input> </ion-item
+          ><br />
+          <ion-item lines="none">
+            <ion-input
+              placeholder="Birthdate"
+              formControlName="birthDate"
+              type="date"
+            ></ion-input> </ion-item
+          ><br />
+          <ion-item lines="none">
+            <ion-input
+              placeholder="Mobile"
+              formControlName="mobileNumber"
+              type="number"
+            ></ion-input> </ion-item
+          ><br />
+          <div
+            class="alert alert-danger"
+            style="
+              text-align: center;
+              color: red;
+              margin-bottom: 10px;
+              margin-top: 10px;
+            "
+            *ngIf="
+                  (!registerForm.get('mobileNumber').valid && registerForm.get('mobileNumber').touched) ||
+                  (registerForm.get('mobileNumber').untouched && formSubmitAttempt)
+                "
+          >
+            Phone Number Pattern is Invalida
+          </div>
+          <ion-item lines="none">
+            <ion-input
+              placeholder="Email"
+              type="email"
+              formControlName="email"
+            ></ion-input>
+          </ion-item>
+        </div>
+        <div
+          class="alert alert-danger"
+          style="
+            text-align: center;
+            color: red;
+            margin-bottom: 10px;
+            margin-top: 10px;
+          "
+          *ngIf="
+                  (!registerForm.get('email').valid && registerForm.get('email').touched) ||
+                  (registerForm.get('email').untouched && formSubmitAttempt)
+                "
+        >
+          Email Pattern is Invalida
+        </div>
+        <div class="login">
+          <div class="buttons" padding-horizontal>
+            <ion-button
+              expand="block"
+              color="primary"
+              size="large"
+              type="submit"
+              shape="round"
+              [routerLink]="['/tabs']"
+              [disabled]="!registerForm.valid"
+              ><p>Sign up</p></ion-button
+            >
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</ion-content>
